@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Restaurant Reservations</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.3/css/foundation.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+  <div class="row">
+    <div class='large-5 columns'>
+      <div class='panel text-center'>
+        <button id="claim">Claim a Reservation</button>
+        <input id="claim input" type="text" placeholder="Enter Reservation Name" />
+        <label id="res-left"></label>
+      </div>
+    </div>
+    <div class='large-5 columns'>
+      <div class='panel text-center'>
+        <button id="reserve">Make a Reservation</button>
+        <input id="make input" type="text" placeholder="Enter Reservation Name" />
+        <label id="res-right"></label>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
+  <script type="text/javascript">
+
+  // var reservations = {
+  //   'Billy': { claimed: false }
+  // };
+
+  // var reserve = function(name) {
+  //   check = _.contains(reservations, reservations[name]);
+  //   if (check) {
+  //     if (reservations[name]['claimed'] === false) {
+  //       alert('Please make the reservation under a different name');
+  //     } 
+  //   } else {
+  //       reservations[name] = {
+  //           claimed: false
+  //       }
+  //     }
+  // };
+
+  // var checkReservation = function(name) {
+  //     check = _.contains(reservations, reservations[name] );
+  //     if (check) {
+  //       if (reservations[name]['claimed'] === false) {
+  //         alert("We found your reservation " + name);
+  //         reservations[name]['claimed'] = true;
+  //       } else {
+  //         alert("This reservation has already been claimed.");
+  //       }
+  //     } else {
+  //         alert("Sorry, no reservation under that name.");
+  //     }
+  // };
+
+//-----------------------------------------------------------------
+
+  // $('#claim').on('click', function (e) {
+  //   var name = prompt("What is your name?");
+  //   checkReservation(name);
+  // });
+
+  // $('#reserve').on('click', function (e) {
+  //   var name = prompt("What name should we reserve under?");
+  //   reserve(name);
+  // });
+
+  </script>
+</body>
+</html>
