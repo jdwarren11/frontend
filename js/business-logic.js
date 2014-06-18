@@ -9,31 +9,35 @@
     };
 
     this.reserve = function(name) {
-      check = _.contains(reservations, reservations[name]);
+      check = _.contains(this.reservations, this.reservations[name]);
       if (check) {
-        if (reservations[name]['claimed'] === false) {
+        if (this.reservations[name]['claimed'] === false) {
           // alert('Please make the reservation under a different name');
-          return "diff name"
+          return "diff name";
         } 
       } else {
-          // reservations[name] = {
-          //     claimed: false
-          // }
-          return "create"
+          this.reservations[name] = {
+              claimed: false
+          }
+          // alert('Your reservation has been made ' + name );
+          return "create";
         }
     };
 
     this.checkReservation = function(name) {
-        check = _.contains(reservations, reservations[name] );
+        check = _.contains(this.reservations, this.reservations[name] );
         if (check) {
-          if (reservations[name]['claimed'] === false) {
-            alert("We found your reservation " + name);
-            reservations[name]['claimed'] = true;
+          if (this.reservations[name]['claimed'] === false) {
+            // alert("We found your reservation " + name);
+            this.reservations[name]['claimed'] = true;
+            return "found";
           } else {
-            alert("This reservation has already been claimed.");
+            // alert("This reservation has already been claimed.");
+            return "claimed";
           }
         } else {
-            alert("Sorry, no reservation under that name.");
+            // alert("Sorry, no reservation under that name.");
+            return "name not found";
         }
     };
 
@@ -42,4 +46,4 @@
   };
 
   window.bl = new BusinessLogic();
-});
+})();
