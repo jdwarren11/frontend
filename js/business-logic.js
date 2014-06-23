@@ -8,22 +8,6 @@
       'Billy': { claimed: false }
     };
 
-    this.reserve = function(name) {
-      check = _.contains(this.reservations, this.reservations[name]);
-      if (check) {
-        if (this.reservations[name]['claimed'] === false) {
-          // alert('Please make the reservation under a different name');
-          return "diff name";
-        } 
-      } else {
-          this.reservations[name] = {
-              claimed: false
-          }
-          // alert('Your reservation has been made ' + name );
-          return "create";
-        }
-    };
-
     this.checkReservation = function(name) {
         check = _.contains(this.reservations, this.reservations[name] );
         if (check) {
@@ -41,7 +25,21 @@
         }
     };
 
-
+    this.reserve = function(name) {
+      check = _.contains(this.reservations, this.reservations[name]);
+      if (check) {
+        if (this.reservations[name]['claimed'] === false) {
+          // alert('Please make the reservation under a different name');
+          return "diff name";
+        } 
+      } else {
+          this.reservations[name] = {
+              claimed: false
+          }
+          // alert('Your reservation has been made ' + name );
+          return "create";
+        }
+    };
 
   };
 
