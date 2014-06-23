@@ -1,0 +1,27 @@
+#bakery .display div { 
+  width: 200px; 
+  height: 200px; 
+  float: left; 
+}
+#bakery .display .cupcake { 
+  background: url("http://i.imgur.com/9ix2JRZ.jpg"); 
+}
+#bakery .display .cookie { 
+  background: url("http://i.imgur.com/Yxq78qn.jpg"); 
+}
+body { 
+  background: url('../images/bakery.jpg') no-repeat; 
+  background-size: cover; 
+}
+.main {
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+@media all and (max-width: 64 rem) {
+  .main {
+    max-width: 90%;
+  }
+}
